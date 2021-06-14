@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # encoding:utf-8
 import selenium
+import time
 from PIL import Image
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
