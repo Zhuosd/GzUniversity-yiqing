@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # encoding:utf-8
 import selenium
+import time
 from PIL import Image
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -61,7 +62,7 @@ try:
     try:
         driver.find_element_by_name("captcha").send_keys(yzm)
         print("验证码成功输入！！")
-    except BaseExcept:
+    except BaseException:
         print("验证码输入失败？？")
         
     print("成功输入账户名、密码及验证码！！")
@@ -71,7 +72,7 @@ except BaseException:
 try:
     driver.find_element_by_class_name("btn-submit").click()
     print("成功登录！！")
-except BaseExcept:
+except BaseException:
     print("登录失败？？")
 
 time.sleep(3)
@@ -86,7 +87,7 @@ try:
     windows = driver.window_handles   # 获取该会话所有的窗口
     driver.switch_to.window(windows[-1])  # 跳转到最新的窗口
     print("窗口切换成功！！")
-except BaseExcept:
+except BaseException:
     print("窗口切换失败？？")
 # 把触发事件跳转到最新界面
 
@@ -96,12 +97,27 @@ try:
 except BaseException:
     print("点击上报按钮失败？？")
 
+
+time.sleep(3)
 try:
-    for i in driver.find_elements_by_xpath("//*[@id='V1_CTRL262']"): #//*[@id="V1_CTRL262"]
-        i.click()
-    print("勾选全部的radioButton！！")
+    driver.find_element_by_id("V1_CTRL262").click()
+    print("点击粤康码是否为绿码按钮成功！！")
 except BaseException:
-    print("无法勾选全部的radioButton？？")
+    print("点击粤康码是否为绿码按钮失败？？")
+
+time.sleep(3)
+try:
+    driver.find_element_by_id("V1_CTRL266").click()
+    print("点击一周内是否做过核酸成功！！")
+except BaseException:
+    print("点击一周内是否做过核酸失败？？")
+
+# try:
+#     for i in driver.find_elements_by_xpath("//*[@id='V1_CTRL262']"): #//*[@id="V1_CTRL262"]
+#         i.click()
+#     print("勾选全部的radioButton！！")
+# except BaseException:
+#     print("无法勾选全部的radioButton？？")
 
 # 进行确认勾选
 time.sleep(3)
@@ -115,11 +131,17 @@ except BaseException:
 try:
     driver.find_element_by_class_name("command_button_content").click()
     print("提交表单！！")
+    time.sleep(3)
+    driver.close()  # 关闭当前窗口
+    driver.quit()  # 退出Chrome浏览器
+    print("打卡成功")
 except BaseException:
     print("表单提交失败？？")
-time.sleep(3)
+    time.sleep(3)
+    driver.close()  # 关闭当前窗口
+    driver.quit()  # 退出Chrome浏览器
+    print("打卡失败")
 
-driver.close() # 关闭当前窗口
-driver.quit()  # 退出Chrome浏览器
-print("打卡成功")
+
+
 
