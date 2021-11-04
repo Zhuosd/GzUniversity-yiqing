@@ -30,42 +30,24 @@ pip install -r requirements
 
 ### 使用步骤
 
-**1、打码平台注册**
+（3.0使用）
 
-本平台的验证码模块是使用"图鉴"http://www.ttshitu.com/user/index.html 平台的打码技术，这个平台每次打码所需要的费用是0.002元，充值1元能使用500次。
+**1、配置ChromeDriver**
 
-注册及充值成功后，直接将图鉴平台对应的账户名及密码填写到程序所对应的位置（已经在程序注明位置）
+略
 
-输入注册推荐码会有更多的优惠：
+**2、配置邮件客户端，开启STMP/POP协议(本程序使用qq邮箱)，获取响应的验证码，在代码响应部分填写自己的信息**
 
-**推荐码：6119962f1e404625b615f9c6c121587f**
-
-![](./figure/图鉴.png)
-
-
-
-**2、填写疫情打卡的平台信息**
-
-以下是广州大学疫情打卡平台的网址：
-
-https://cas.gzhu.edu.cn/cas_server/login;jsessionid=EF79AF3AE0584CE1D3391788B5EC17F9?service=http%3A%2F%2Fyqtb.gzhu.edu.cn%2Finfoplus%2Flogin%3FretUrl%3Dhttp%253A%252F%252Fyqtb.gzhu.edu.cn%252Finfoplus%252Foauth2%252Fauthorize%253Fx_redirected%253Dtrue%2526scope%253Dprofile%252Bprofile_edit%252Bapp%252Btask%252Bprocess%252Bsubmit%252Bprocess_edit%252Btriple%252Bstats%252Bsys_profile%252Bsys_enterprise%252Bsys_triple%252Bsys_stats%252Bsys_entrust%252Bsys_entrust_edit%2526response_type%253Dcode%2526redirect_uri%253Dhttp%25253A%25252F%25252Fyq.gzhu.edu.cn%25252Ftaskcenter%25252Fwall%25252Fendpoint%25253FretUrl%25253Dhttp%2525253A%2525252F%2525252Fyq.gzhu.edu.cn%2525252Ftaskcenter%2525252Fworkflow%2525252Findex%2526client_id%253D1640e2e4-f213-11e3-815d-fa163e9215bb'
-
-将该网址的账户名及密码填写到程序所对应的位置。
-
-![](/figure/疫情打卡.png)
-
-
+略
 
 **3、执行程序**
-
-本次程序提供两种版本，包括jupterlab(anaconda)版本及.py版本，根据个人情况自行选择版本
 
 （1）配置有python环境，直接双击执行（可能出现报错的情况看不到）
 
 （2）Win+R，输入cmd，跳转到程序所在目录，采用 
 
  ```
-python yiqing-v2.0.py
+python yiqing-v3.0.py
  ```
 
 （3）在Anaconda下，直接执行代码块
@@ -83,4 +65,5 @@ python yiqing-v2.0.py
 
 
 ## 再次声明：本程序仅供学习使用，并无其他意图，如有非法使用，均与本人无关。
+
 
