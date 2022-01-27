@@ -16,9 +16,9 @@ from email.utils import formataddr
 # In[2]:
 
 # 打卡账号
-username = "2112006300"
+username = "xxxxx"
 # 打卡账号的密码
-password = "167997"
+password = "xxxxxx"
 # 打卡尝试次数
 timesToRepeat = 5
 # 打卡网址
@@ -28,12 +28,12 @@ emailServerAddress = 'smtp.qq.com'
 # 邮箱服务器端口号
 emailServerPort = 25
 # 接收打卡提示的邮箱
-userEmail = 'zhuosd@e.gzhu.edu.cn'
+userEmail = 'xxxx@xxxxxx'
 
 # 发送打卡提示的邮箱（需开启STMP/POP协议）PS:就是发件人，可以跟收件人是同一个邮箱
-senderEmail = '719486159@qq.com'
+senderEmail = 'xxxxxx@qq.com'
 # 发送打卡提示邮箱的密码码（开启STMP/POP协议时给的验证码）PS:就是发件人邮箱的密码
-senderEmailPasswd = 'Zsd5201314'
+senderEmailPasswd = 'xxxxxxx'
 
 # 邮件正文内容（HTML）(打卡成功)
 successMsg = '''
